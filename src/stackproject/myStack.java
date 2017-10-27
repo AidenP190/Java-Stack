@@ -14,14 +14,16 @@ import java.util.ArrayList;
  */
 public class myStack<T> {
     public ArrayList<T> Inputs = new ArrayList<>();
-    private int counter = 0;
-    
     public void push(T Stack)
     {
-        Inputs.add(Stack);
+           Inputs.add(Stack); 
     }
     public T pop()
     {
-        return Inputs.get(counter++);
+        T input = Inputs.get(Inputs.size()-1); 
+        Inputs.remove(input);
+        return input;
+        
+        
     }
 }
